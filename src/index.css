@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.root {
+    padding: 20px;
+}
+
+.app-description {
+    text-align: center;
+    font-family: Menlo;
+}
+
+.adder-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adder-cta-section {
+    display: flex;
+    justify-content: space-between;
+    width: 35vw;
+}
+
+.input-adder {
+    font-size: 16px;
+    padding: 2px;
+    width: 20vw;
+}
+
+.divider {
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+}
+
+.item-root {
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.item-text {
+    width: 40vw;
+    font-family: Menlo;
+}
+
+.item-box {
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+.text-crossed {
+    text-decoration: line-through;
+    color: red
+}
+
+.reset-button {
+    background-color: lightseagreen;
+    color: white;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 1rem;
+    float: right;
+    font-family: Menlo;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.no-data {
+    background-color: lightgray;
+    color: gray;
+}
