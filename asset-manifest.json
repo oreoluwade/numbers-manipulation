@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/numbers-manipulation/static/css/main.fb68d6d1.chunk.css",
+    "main.js": "/numbers-manipulation/static/js/main.f078fa5c.chunk.js",
+    "main.js.map": "/numbers-manipulation/static/js/main.f078fa5c.chunk.js.map",
+    "runtime-main.js": "/numbers-manipulation/static/js/runtime-main.b4e75c40.js",
+    "runtime-main.js.map": "/numbers-manipulation/static/js/runtime-main.b4e75c40.js.map",
+    "static/js/2.5b1e9781.chunk.js": "/numbers-manipulation/static/js/2.5b1e9781.chunk.js",
+    "static/js/2.5b1e9781.chunk.js.map": "/numbers-manipulation/static/js/2.5b1e9781.chunk.js.map",
+    "index.html": "/numbers-manipulation/index.html",
+    "precache-manifest.43ad339b61e6c2638931c151229ec33c.js": "/numbers-manipulation/precache-manifest.43ad339b61e6c2638931c151229ec33c.js",
+    "service-worker.js": "/numbers-manipulation/service-worker.js",
+    "static/css/main.fb68d6d1.chunk.css.map": "/numbers-manipulation/static/css/main.fb68d6d1.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4e75c40.js",
+    "static/js/2.5b1e9781.chunk.js",
+    "static/css/main.fb68d6d1.chunk.css",
+    "static/js/main.f078fa5c.chunk.js"
+  ]
+}
