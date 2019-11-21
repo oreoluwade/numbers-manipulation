@@ -19,6 +19,7 @@ code {
 .app-description {
     text-align: center;
     font-family: Menlo;
+    font-size: 0.9rem;
 }
 
 .adder-wrapper {
