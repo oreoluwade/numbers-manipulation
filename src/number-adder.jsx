@@ -1,43 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import NumberList from './number-list';
 import { KEY_NAME } from './constants';
-
-const data = [
-    {
-        number: 1,
-        checked: false
-    },
-    {
-        number: 23,
-        checked: true
-    },
-    {
-        number: 8,
-        checked: false
-    },
-    {
-        number: 16,
-        checked: false
-    },
-    {
-        number: 52,
-        checked: true
-    },
-    {
-        number: 98,
-        checked: false
-    }
-];
+import { data, getMiddleNumber } from './helpers';
 
 const storageItem = localStorage.getItem(KEY_NAME);
 
 const storedData = storageItem ? JSON.parse(storageItem) : data;
-
-// const getMiddleNumber = sortedArray => {
-//     return sortedArray.length % 2 === 1
-//         ? sortedArray[(sortedArray.length - 1) / 2]
-//         : sortedArray[sortedArray.length / 2];
-// };
 
 const NumberAdder = () => {
     const [numbersArray, setNumbersArray] = useState([]);
@@ -78,26 +46,23 @@ const NumberAdder = () => {
                 const newItem = { number: inputNumber, checked: false };
                 const mappedNumbers = numbersArray.map(el => el.number);
 
-                // const sortedNumbers = [...mappedNumbers, newItem].sort(
-                //     (a, b) => a - b
-                // );
+                const sortedNumbers = [...mappedNumbers, inputNumber].sort(
+                    (a, b) => a - b
+                );
 
                 if (Math.max(...mappedNumbers) < inputNumber) {
                     updateNumbersList([...numbersArray, newItem]);
                 } else if (Math.min(...mappedNumbers) > inputNumber) {
                     updateNumbersList([newItem, ...numbersArray]);
-                }
-                // Ambiguous. Todo
-                // else if (getMiddleNumber(sortedNumbers) === inputNumber) {
-                //     const modifiedArray = [...numbersArray];
-                //     modifiedArray.splice(
-                //         sortedNumbers.indexOf(inputNumber),
-                //         0,
-                //         newItem
-                //     );
-                //     updateNumbersList(modifiedArray);
-                // }
-                else {
+                } else if (getMiddleNumber(sortedNumbers) === inputNumber) {
+                    const modifiedArray = [...numbersArray];
+                    modifiedArray.splice(
+                        sortedNumbers.indexOf(inputNumber),
+                        0,
+                        newItem
+                    );
+                    updateNumbersList(modifiedArray);
+                } else {
                     const modifiedArray = [...numbersArray];
                     modifiedArray.splice(numbersArray.length - 1, 0, newItem);
                     updateNumbersList(modifiedArray);
