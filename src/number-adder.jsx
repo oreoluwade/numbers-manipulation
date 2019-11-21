@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import NumberList from './number-list';
+import ListItem from './list-item';
 import { KEY_NAME } from './constants';
-import { data, getMiddleNumber } from './helpers';
+import { data, getMiddleNumber, getMax, getMin } from './helpers';
 
 const storageItem = localStorage.getItem(KEY_NAME);
 
@@ -89,6 +89,8 @@ const NumberAdder = () => {
         setNoDataInStorage(true);
     };
 
+    const numbersOnly = numbersArray.map(el => el.number);
+
     return (
         <div className="adder-wrapper">
             <div className="adder-cta-section">
@@ -114,10 +116,13 @@ const NumberAdder = () => {
             </div>
             <Fragment>
                 {numbersArray.map(datum => (
-                    <NumberList
+                    <ListItem
                         item={datum}
                         key={datum.number}
                         handleCheckedState={handleCheckedState}
+                        maxNum={getMax(numbersOnly)}
+                        minNum={getMin(numbersOnly)}
+                        middleNum={getMiddleNumber(numbersOnly)}
                     />
                 ))}
             </Fragment>

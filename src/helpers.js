@@ -30,3 +30,7 @@ export const getMiddleNumber = sortedArray => {
         ? sortedArray[(sortedArray.length - 1) / 2]
         : sortedArray[sortedArray.length / 2];
 };
+
+export const getMax = arr => Math.max(...arr);
+
+export const getMin = arr => Math.min(...arr);
